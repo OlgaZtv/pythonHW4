@@ -16,7 +16,7 @@ def find_registration_button_on_login_page(page_url, button_text):
 
 
 def print_functions_names(function):
-    name_function = function.__name__.replace("_"," ").capitalize()
+    name_function = function.__name__.replace("_", " ").capitalize()
     arguments_name = function.__code__.co_varnames
 
     if len(arguments_name) != 0:
@@ -26,6 +26,6 @@ def print_functions_names(function):
 
     print(f'Имя функции {name_function}. {arguments_description}')
 
-    for function in (open_browser, go_to_companyname_homepage, find_registration_button_on_login_page):
-        print_functions_names(function)
 
+for function in (open_browser, go_to_companyname_homepage, find_registration_button_on_login_page):
+    print_functions_names(function)
